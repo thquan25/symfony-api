@@ -3,10 +3,10 @@
 namespace App\Controller\Api\V1;
 
 use App\Repository\SchoolRepository;
+use Doctrine\ORM\EntityNotFoundException;
 use Symfony\Component\Routing\Annotation\Route;
 use FOS\RestBundle\Controller\Annotations as Rest;
 use FOS\RestBundle\Controller\AbstractFOSRestController;
-use Doctrine\ORM\EntityNotFoundException;
 
 /**
  * @Route("/api/v1")

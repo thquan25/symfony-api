@@ -31,6 +31,11 @@ class Country
      */
     private $zone;
 
+    /**
+     * @ORM\Column(type="string", length=50, nullable=true)
+     */
+    private $currencyUnit;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -68,6 +73,18 @@ class Country
     public function setZone(?Zone $zone): self
     {
         $this->zone = $zone;
+
+        return $this;
+    }
+
+    public function getCurrencyUnit(): ?string
+    {
+        return $this->currencyUnit;
+    }
+
+    public function setCurrencyUnit(?string $currencyUnit): self
+    {
+        $this->currencyUnit = $currencyUnit;
 
         return $this;
     }
